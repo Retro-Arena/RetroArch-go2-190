@@ -329,9 +329,9 @@ static void gfx_ctx_drm_swap_buffers(void *data, void *data2)
          go2_surface_t* surface = go2_context_surface_lock(drm->context);
          go2_presenter_post(drm->presenter,
                      surface,
-                     0, 0, 480, 320,
-                     0, 0, 320, 480,
-                     GO2_ROTATION_DEGREES_270);
+                     0, 0, 640, 480,
+                     0, 0, 480, 640,
+                     GO2_ROTATION_DEGREES_0);
          go2_context_surface_unlock(drm->context, surface);
 #endif
          break;
